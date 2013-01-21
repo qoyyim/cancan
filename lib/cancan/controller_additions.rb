@@ -202,7 +202,6 @@ module CanCan
       #
       # You can also pass the resource name as the first argument to skip that resource.
       def skip_load_resource(*args)
-        raise ImplementationRemoved, "The skip_load_resource method has been removed, use skip_load_and_authorize_resource instead."
         options = args.extract_options!
         name = args.first
         cancan_skipper[:load][name] = options
@@ -219,7 +218,6 @@ module CanCan
       #
       # You can also pass the resource name as the first argument to skip that resource.
       def skip_authorize_resource(*args)
-        raise ImplementationRemoved, "The skip_authorize_resource method has been removed, use skip_load_and_authorize_resource instead."
         options = args.extract_options!
         name = args.first
         cancan_skipper[:authorize][name] = options
